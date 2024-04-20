@@ -1,0 +1,28 @@
+Input, Textarea {
+  margin: 0.6rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-heading)
+}
+
+input::placeholder,
+Textarea::placeholder {
+  color: var(--color-heading);
+  font-size: 1.16rem;
+  font-weight: 500;
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.card {
+  transition: all 0.4s;
+}
+
+.card:hover {
+  box-shadow: 0 0 1rem #04d;
+}

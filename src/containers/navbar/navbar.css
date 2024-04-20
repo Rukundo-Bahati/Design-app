@@ -1,0 +1,9 @@
+a {
+  display: inline-block; 
+  transition: all 0.4s; 
+}
+
+a:hover {
+  transform: scale(1.2); 
+  color: var(--color-heading);
+}

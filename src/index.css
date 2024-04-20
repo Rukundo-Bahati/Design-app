@@ -1,0 +1,34 @@
+
+:root {
+  --color-bg: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  --color-link: #000;
+  --color-heading: rgb(5, 28, 89);
+  --color-apps: rgba(0, 0, 0, 75%);
+  --color-light: #fff;
+  --color-logo: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  --bg-features: rgba(145, 179, 250, 60%);
+  --bg-button: rgb(145, 179, 250);
+  --bg-container: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  --bg-card: linear-gradient(
+    #a8c1f5 55%,
+    #acc5f9 0%,
+    #b0c9fd 50%,
+    #566a94 100%
+  );
+  --color-card-header: radial-gradient(#3d6ff1, rgb(8, 1, 30));
+  --bg-contact: linear-gradient(to top right, rgb(8, 1, 30) 18%, #3d6ff1);
+}
+.k2d-bold,
+body {
+  background-color: #8ec5fc;
+  background-image: var(--color-bg);
+  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.animate {
+  translate: all 0.5s;
+}
+
