@@ -13,7 +13,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 import './card.css'
 
-const CustomCard = ({bg}) => {
+const CustomCard = ({ bg }: { bg: string }) => {
   const rotationAngle = useBreakpointValue({ base: "-55deg", md: "-44deg" })
   const rotationWidth = useBreakpointValue({ base: "203%", md: "220%" })
 
@@ -47,7 +47,7 @@ const CustomCard = ({bg}) => {
                 height: "100%",
                 overflow: "hidden",
               }}
-            >
+            >delete my project 
               <div
                 style={{
                   width: "125%",
