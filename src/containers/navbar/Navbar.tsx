@@ -1,8 +1,7 @@
-import { Link, Stack } from "@chakra-ui/react";
+import { Link, Stack, useBreakpointValue } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
-import './navbar.css'
-
+import "./navbar.css";
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState("");
@@ -19,10 +18,12 @@ const Navbar = () => {
   const h1Styles = {
     fontSize: "2rem",
     fontWeight: "bolder",
-    background: "var(--color-logo)", 
-    WebkitBackgroundClip: "text", 
-    WebkitTextFillColor: "transparent", 
+    background: "var(--color-logo)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
   };
+
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,34 +43,36 @@ const Navbar = () => {
 
   return (
     <Stack
-      direction="row"
+      direction={isMobile ? "column" : "row"} // Change direction based on breakpoint
       justifyContent="space-between"
       style={{
         position: "sticky",
         top: "0",
-        zIndex: 100, 
-        backgroundColor: navColor, 
-        padding: '1rem',
-        width: '100%'
+        zIndex: 100,
+        backgroundColor: navColor,
+        padding: "1rem",
+        width: "100%",
       }}
     >
-      <Link href="#home"> 
-      <h1 style={h1Styles}>LOGO</h1>
+      <Link href="#home">
+        <h1 style={h1Styles}>LOGO</h1>
       </Link>
-      <ul style={listStyles}>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#projects">Inquiry</a>
-        </li>
-        <li>
-          <a href="#about">Join Us</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      {!isMobile && (
+        <ul style={listStyles}>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#projects">Inquiry</a>
+          </li>
+          <li>
+            <a href="#about">Join Us</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      )}
     </Stack>
   );
 };

@@ -1,5 +1,10 @@
-const Template = ({ heading, content }) => {
-  const styleHeading = {
+interface TemplateProps {
+  heading: string;
+  content: React.ReactNode; 
+}
+
+const Template: React.FC<TemplateProps> = ({ heading, content }) => {
+  const styleHeading: React.CSSProperties = {
     color: "var(--color-heading)",
     fontSize: "1.4rem",
     textAlign: "center",
